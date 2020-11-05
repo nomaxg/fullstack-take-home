@@ -1,3 +1,6 @@
+/*
+Routes that handle courses, sessions, and section signups.
+*/
 const express = require('express');
 
 const asyncHandler = require('express-async-handler');

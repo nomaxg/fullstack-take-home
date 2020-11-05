@@ -1,3 +1,7 @@
+/*
+Simple navigation bar that contains a "home" button, a "logout" button, and 
+the logged in username
+*/
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import CourseApi from "../utils/CourseApi.js";
