@@ -1,0 +1,15 @@
+[
+	{
+		"id": 1,
+		"name": "How To Write a Book",
+		"description": "Ever wondered how you could write a book? Well now is your chance! Take this course to learn how to become the next Toni Morrison.",
+                "imgUrl": "https://images.pexels.com/photos/851213/pexels-photo-851213.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+	},
+
+	{
+		"id": 2,
+		"name": "The Physics of Time",
+		"description": "Time is just a construct - or is it? Take this course to dive deep into the space-time continuum.",
+                "imgUrl": "https://st4.depositphotos.com/2860187/21971/v/600/depositphotos_219719238-stock-video-space-travel-near-big-galaxy.jpg" 
+	}
+]
