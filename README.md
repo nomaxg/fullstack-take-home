@@ -32,4 +32,4 @@ Now start the frontend:
 To run API tests, navigate to the `server` directory and run `yarn test`. Running the server tests will reset the database, so run `yarn populatedb` after testing.
 
 ## Implementation Notes
-This was a fun exercise! It's been awhile since I've used the React/Node stack and it was interesting to see how the React API has evolved. I found [hooks](https://reactjs.org/docs/hooks-intro.html) to be particularly useful. I also experimented a bit with user authorization and authentication, hashing passwords with [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) and using JSON web tokens. 
+This was a fun exercise! It's been awhile since I've used the React/Node stack and it was interesting to see how the React API has evolved. I found [hooks](https://reactjs.org/docs/hooks-intro.html) to be particularly useful. I also experimented a bit with user authorization and authentication, hashing passwords with [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) and using JSON web tokens. On the interface side, material-ui made it very easy to style the app. 
