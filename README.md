@@ -1,55 +1,35 @@
-# Take Home Exercise
-
-You will have **a week** to complete the following take-home exercise. Please use Javascript to code the following exercise. We know Javascript is not everyone's primary coding language.**We will NOT be grading you on how well you know Javascript**, but rather on the deeper technical knowledge of code design patterns and best practices.
-
-When submitting your exercise please include:
-
-- A Readme for how to run the application and any tests (including any dependencies that must be downloaded). Also feel free to include any notes or tidbits about thought process as you tackled the exercise.
-
-- Any comments to explain particular logic or call out something cool!
-
-To submit your exercise, please create a repository in Github and email the link to [eng@join-real.com](mailto:eng@join-real.com). Also please email with any questions you may have. Happy Coding!
+# Course Application Take Home
 
 ---
 
-## Exercise: Course Sign-up
-
-Create an application (Frontend and Backend) that allows people to sign up for courses. Courses are structured in the following way:
-
-- Each course has 4 sessions, and each session's content is released on a weekly basis.
-
-- A new section of the course is opened for sign up every 2 weeks.
-
-- There is a cap of 10 people per course section.
-
-## Notes
-- Make sure you have `yarn` installed on your machine. If you do not, please run:
-```
-brew install yarn
-```
-
-- A basic NodeJS `express` server is set up, though feel free to use any NodeJS framework you may be comfortable with. To run the app:
-
-```
-yarn && yarn start
-```
-
-- A `create-react-app` project is included to use for frontend, but again feel free to use whatever framework (or none) you are comfortable with! (We are not judging design/ your CSS skills). To run the app:
-
-```
-yarn && yarn start
-```
-
-- There is some test data included in `data/` as a starting point to seed your database.
-
 ## Requirements
+- [docker](https://www.docker.com/)
+- yarn (`brew install yarn`)
 
-- A Postgres database should be set up to store courses, sections, sessions, and sign ups. Included is a `docker-compose.yml` file that spins up a Postgres db on `localhost:5560`.
+## Setup 
 
-- All session titles and descriptions for a course should be visible to users before sign up.
+First, run the database and server.
+- Install dependencies: `yarn`
+- Navigate to the server directory: `cd server`
+- Start the database: `yarn startdb`. If you encounter issues, ensure that docker is running.
+- Start the server: `yarn start`
+- In another terminal, navigate to the `server` directory. Seed the database with the starting data: `yarn populatedb`
 
-- A session's content should be visible only by people who have signed up for the course.
+Now start the frontend: 
+- Navigate to the frontend directory: `cd course-client`
+- Install depdendencies: `yarn`
+- Start the app: `yarn start`
 
-- A list of users signed up for each course section should be visible.
+## Using the Application
 
-- A user should be able to register for a course and remove themselves from the course.
+1. Open the [application](http://localhost:3000/) in your browser.
+2. Sign up with a valid username/password. You can also login with an existing username and password on the same form.
+3. Explore courses! Hit "Preview schedule" to see a preview of the course content. And "course information" to join a section.
+4. Find a section with an open slot and hit "join section". 
+5. You will be able to see the released content and a list of section participants. You can also leave the section.
+
+## Testing
+To run API tests, navigate to the `server` directory and run `yarn test`. Running the server tests will reset the database, so run `yarn populatedb` after testing.
+
+## Implementation Notes
+This was a fun exercise! It's been awhile since I've used the React/Node stack and it was interesting to see how the React API has evolved. I found [hooks](https://reactjs.org/docs/hooks-intro.html) to be particularly useful. I also experimented a bit with user authorization and authentication, hashing passwords with [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) and using JSON web tokens. 
